@@ -1,0 +1,19 @@
+<h1>Componente vista del empleado</h1>
+
+<hr/>
+
+<div *ngIf="muestraPrimero == true">
+    <button (click)="cambiarVistaEmpleado(false)">Muestra segundo</button>
+    <ul >
+        <li>{{empleado.nombre}}</li>
+        <li>{{empleado.edad}}</li>
+    </ul>
+</div>
+
+<div>
+    <button (click)="cambiarVistaEmpleado(true)">Muestra Primero</button>
+    <ul *ngIf="muestraPrimero!=true">
+        <li>{{listEmpleados[0].nombre}}</li>
+        <li>{{listEmpleados[0].edad}}</li>
+    </ul>
+</div>
