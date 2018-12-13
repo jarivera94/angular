@@ -1,7 +1,7 @@
 <h1>Componente vista del empleado</h1>
 
 <hr/>
-
+<h3>Ng IF</h3>
 <div *ngIf="muestraPrimero == true">
     <button (click)="cambiarVistaEmpleado(false)">Muestra segundo</button>
     <ul >
@@ -10,10 +10,48 @@
     </ul>
 </div>
 
-<div>
+<div *ngIf="muestraPrimero!=true">
     <button (click)="cambiarVistaEmpleado(true)">Muestra Primero</button>
-    <ul *ngIf="muestraPrimero!=true">
+    <ul >
         <li>{{listEmpleados[0].nombre}}</li>
         <li>{{listEmpleados[0].edad}}</li>
     </ul>
+</div>
+
+<hr/>
+<h3>Ng For</h3>
+<div>
+    <ul>
+        <li *ngFor="let e of listEmpleados; let i = index">
+            <strong>Empleado {{i+1}}</strong>
+            <ul>
+                <li>{{e.nombre}}</li>
+                <li>{{e.edad}}</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<hr/>
+<h3>Ng Switch y Ng Style</h3>
+
+<div>
+    <ul [ngSwitch]="colorSwitch">
+        <li *ngSwitchCase="'red'" [ngStyle]="{'background':colorSwitch, 'color':'white'}" >Es de color rojo</li>
+        <li *ngSwitchCase="'green'" [ngStyle]="{'background':colorSwitch, 'color':'white'}" >Es de color verde</li>
+        <li *ngSwitchCase="'blue'" [ngStyle]="{'background':colorSwitch, 'color':'white'}">Es de color azul</li>
+    </ul>
+</div>
+
+<hr/>
+<h3>Data binding</h3>
+<h4>Recordar importar formsmodule en app.component</h4>
+<div>
+    <input type="text" [(ngModel)]="colorSeleccionado">
+    <strong [ngClass]="{
+        fondoVerde:colorSeleccionado=='green',
+        fondoAzul:colorSeleccionado=='blue',
+        fondoRojo:colorSeleccionado=='red'
+    }" >Color seleccionado : {{colorSeleccionado}}</strong>
+    <strong [ngClass]="['fondoVerde','letraBlanca']"> Clases varias</strong>
 </div>
