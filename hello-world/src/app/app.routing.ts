@@ -15,6 +15,7 @@ const appRoutes:Routes=[
     {path:'empleado', component:EmpleadoComponent}, //ruta empleado existente
     {path:'fruta', component:FrutaComponent}, // ruta de la fruta existente
     {path:'persona', component:PersonaComponent},
+    {path:'persona/:idPersona',component:PersonaComponent},
     {path:'contacto',component:ContactoComponent},
     {path:'**', component:ErrorComponent}, // ** define si la ruta falla enviarlo al mensaje de error
     
