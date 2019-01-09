@@ -11,3 +11,8 @@
 .letraBlanca{
     color: white;
 }
+
+.activado{
+    font-weight: bold;
+    background: yellow;
+}

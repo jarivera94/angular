@@ -11,10 +11,12 @@ import {FrutaComponent} from './fruta/fruta.component';
 import {EmpleadoComponent} from './empleado/empleado.component';
 import {PersonaComponent} from './persona/persona.component';
 import {ErrorComponent} from './error/error.component';
+import {HomeComponent} from './home/home.component';
+import {ContactoComponent} from './contacto/contacto.component'
 @NgModule({
   declarations: [
     AppComponent,FrutaComponent,EmpleadoComponent
-    ,PersonaComponent,ErrorComponent
+    ,PersonaComponent,ErrorComponent,HomeComponent,ContactoComponent
   ],
   imports: [
     BrowserModule,
