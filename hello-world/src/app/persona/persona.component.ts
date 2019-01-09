@@ -30,4 +30,8 @@ export class PersonaComponent{
         this.nombre='Pablo perez';
         alert(this.nombre);
     }
+
+    redirige(){
+        this._router.navigate(['/persona',30]);
+    }
 }
