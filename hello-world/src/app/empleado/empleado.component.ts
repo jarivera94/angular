@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {Empleado} from './empleado';
 @Component({
-
     selector:'empleado',
     templateUrl:'./empleado.component.html'
 })
@@ -28,5 +27,8 @@ export class EmpleadoComponent{
 
     cambiarVistaEmpleado(valor:Boolean){
         this.muestraPrimero=valor;
+    }
+    imprimeBoton(){
+        console.log(this.colorSeleccionado);
     }
 }

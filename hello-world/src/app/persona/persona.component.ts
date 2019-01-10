@@ -16,6 +16,7 @@ export class PersonaComponent{
         this.nombre='Jael Alexander Rivera Oviedo';
         this.edad =24;
         this.mayorDeEdad=true;
+        
     }
 
     ngOnInit(){
@@ -24,6 +25,7 @@ export class PersonaComponent{
 
         this._route.params.forEach((params:Params)=>{
             this.idPersona=params["idPersona"];
+            localStorage.setItem("idpersona",this.idPersona.toString());
         });
     }
     cambiarnombre(){
