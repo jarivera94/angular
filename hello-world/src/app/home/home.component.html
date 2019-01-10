@@ -1,5 +1,12 @@
 <h2>{{tittle}}</h2>
 
+<hr/>
+Fecha {{fecha}}
+<hr/>
+Pipe {{fecha | date:'fullDate'}}
+<hr/>
+Pipe {{fecha | date:'dd/MM/yyyy'}}
+<hr/>
 <div>
     <input type="text"  [(ngModel)]="prendaACtual" ><button (click)="addPrenda()">Agregar Prenda</button>
     <p *ngIf="prendaACtual">La prenda Actual es <strong>{{prendaACtual}}</strong></p>

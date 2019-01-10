@@ -10,7 +10,10 @@ export class HomeComponent{
     private tittle:String='Pagina Principal';
     private listadoRopa: Array<string>=[];
     private prendaACtual:string;
-    constructor(private _ropaService:RopaService){}
+    private fecha:Date;
+    constructor(private _ropaService:RopaService){
+        this.fecha= new Date();
+    }
 
     ngOnInit(){
         console.log(this._ropaService.prueba());
