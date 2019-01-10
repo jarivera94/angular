@@ -3,9 +3,9 @@
 <hr/>
 Fecha {{fecha}}
 <hr/>
-Pipe {{fecha | date:'fullDate'}}
+Pipe {{fecha | date:'fullDate' | uppercase}}
 <hr/>
-Pipe {{fecha | date:'dd/MM/yyyy'}}
+Pipe {{fecha | date:'dd/MM/yyyy' |uppercase}}
 <hr/>
 <div>
     <input type="text"  [(ngModel)]="prendaACtual" ><button (click)="addPrenda()">Agregar Prenda</button>
