@@ -7,6 +7,10 @@ Pipe {{fecha | date:'fullDate' | uppercase}}
 <hr/>
 Pipe {{fecha | date:'dd/MM/yyyy' |uppercase}}
 <hr/>
+Pipe Personalizados
+
+{{10 | conversor :7}}
+
 <div>
     <input type="text"  [(ngModel)]="prendaACtual" ><button (click)="addPrenda()">Agregar Prenda</button>
     <p *ngIf="prendaACtual">La prenda Actual es <strong>{{prendaACtual}}</strong></p>
