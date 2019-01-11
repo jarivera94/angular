@@ -15,7 +15,6 @@ Pipe Personalizados
     <input type="text"  [(ngModel)]="prendaACtual" ><button (click)="addPrenda()">Agregar Prenda</button>
     <p *ngIf="prendaACtual">La prenda Actual es <strong>{{prendaACtual}}</strong></p>
 </div>
-
 <ul>
     <li *ngFor="let ropa of listadoRopa; let i = index">
         {{i}} - {{ropa}} - <button (click)="removePrenda(i)">Eliminar prenda</button>
