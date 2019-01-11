@@ -22,5 +22,14 @@
                 Solo texto 
             </span>
     </p>
-    <input type="submit" value="Guardar datos">
+    <input type="submit" value="Guardar datos" [disabled]="!formCoche.valid">
 </form>
+
+
+<div>
+    <ul>
+        <li *ngFor="let coche of listCoches">
+            {{coche.nombre}} - {{coche.color}} - {{coche.modelo}}
+        </li>
+    </ul>
+</div>
