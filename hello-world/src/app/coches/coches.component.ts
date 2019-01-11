@@ -1,15 +1,18 @@
 import {Component} from '@angular/core';
 import {Coche} from './coche';
+import {PeticionesServices} from '../services/peticiones.services';
 @Component({
     selector:'coches',
-    templateUrl:'./coches.component.html'
+    templateUrl:'./coches.component.html',
+    providers:[PeticionesServices]
 })
 
 export class CochesCompoent{
 
     private coche: Coche;
     private listCoches :Array<Coche>;
-    constructor(){
+    private articulos;
+    constructor(private _peticionesService:PeticionesServices){
         this.coche= new Coche(null,null,null);
         this.listCoches=[
             new Coche("panda","10","Wolsvagen"),
@@ -18,6 +21,19 @@ export class CochesCompoent{
         ]
     }
 
+    ngOnInit(){
+        console.log(this._peticionesService.getPrueba());
+
+        this._peticionesService.getArticulos()
+            .subscribe(
+                result=>{
+                    this.articulos=result;
+                },
+                error=>{
+                    console.log(error);
+                }
+            );
+    }
 
     onSubmit(){
         console.log(this.coche);

@@ -15,6 +15,8 @@ import {HomeComponent} from './home/home.component';
 import {ContactoComponent} from './contacto/contacto.component'
 import {CochesCompoent} from './coches/coches.component';
 import {ConversorPipe} from './pipe/conversor.pipe';
+
+import {HttpModule} from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,FrutaComponent,EmpleadoComponent
@@ -24,7 +26,8 @@ import {ConversorPipe} from './pipe/conversor.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    routing // routing
+    routing, // routing
+    HttpModule //Request http
   ],
   providers: [appRoutingProvides],
   bootstrap: [AppComponent]
