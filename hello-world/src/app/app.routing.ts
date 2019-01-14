@@ -10,6 +10,7 @@ import {PersonaComponent} from './persona/persona.component';
 import {HomeComponent} from './home/home.component';
 import {ContactoComponent} from './contacto/contacto.component';
 import {CochesCompoent} from './coches/coches.component';
+import { PlantillasComponent }  from './plantillas/plantillas.component';
 const appRoutes:Routes=[
     {path:'', component:HomeComponent},//default
     {path:'home', component:HomeComponent},
@@ -19,6 +20,7 @@ const appRoutes:Routes=[
     {path:'coches',component:CochesCompoent},
     {path:'persona/:idPersona',component:PersonaComponent},
     {path:'contacto',component:ContactoComponent},
+    {path:'plantillas',component:PlantillasComponent},
     {path:'**', component:ErrorComponent}, // ** define si la ruta falla enviarlo al mensaje de error
     
 ];

@@ -15,12 +15,12 @@ import {HomeComponent} from './home/home.component';
 import {ContactoComponent} from './contacto/contacto.component'
 import {CochesCompoent} from './coches/coches.component';
 import {ConversorPipe} from './pipe/conversor.pipe';
-
+import { PlantillasComponent }  from './plantillas/plantillas.component';
 import {HttpModule} from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,FrutaComponent,EmpleadoComponent
-    ,PersonaComponent,ErrorComponent,HomeComponent,ContactoComponent,ConversorPipe,CochesCompoent
+    ,PersonaComponent,ErrorComponent,HomeComponent,ContactoComponent,ConversorPipe,CochesCompoent,PlantillasComponent
   ],
   imports: [
     BrowserModule,
